@@ -71,7 +71,11 @@ def evaluate(source_file, target_file, label='answer'):
     metrics={k:'%.3f' % (v * 100) for k,v in metrics.items()}
     return metrics
 
+source_file='/Users/qichejie/Desktop/allWork/git_work/KgCLUE/datasets/dev.json' # 模型预测文件
+target_file='/Users/qichejie/Desktop/allWork/git_work/KgCLUE/datasets/test_public.json' # 使用公开测试集进行自测
+
+# orignal file
 # source_file='test_public_predict.json' # 模型预测文件
 # target_file='test_public.json' # 使用公开测试集进行自测
-# metrics=evaluate(source_file, target_file)
-# print("metrics:",metrics)
+metrics=evaluate(source_file, target_file)
+print("metrics:",metrics)
